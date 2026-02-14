@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://valentine-code-taupe.vercel.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>For Zwayniha 💖</title>
+
+  <script src="./index.umd.js.download"></script>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe6e6, #fff5cc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      position: relative;
+      transition: background 3s ease-in-out;
+      color: #333;
+    }
+
+    /* 🌌 Night */
+    .night-overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top,
+          #1b2a4e 0%,
+          #0b1026 45%,
+          #050812 100%);
+      opacity: 0;
+      transition: opacity 3s ease-in-out;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    body.night .night-overlay {
+      opacity: 1;
+    }
+
+    body.night {
+      color: white;
+    }
+
+    /* ⭐ Stars */
+    .stars {
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 5% 10%, white, transparent),
+        radial-gradient(1.5px 1.5px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 40% 70%, white, transparent),
+        radial-gradient(1px 1px at 60% 20%, white, transparent),
+        radial-gradient(1.5px 1.5px at 80% 60%, white, transparent);
+      opacity: 0;
+      transition: opacity 3s ease-in-out;
+      z-index: 0;
+      pointer-events: none;
+      animation: twinkle 4s infinite alternate;
+    }
+
+    body.night .stars {
+      opacity: 0.9;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.6; }
+      to { opacity: 1; }
+    }
+
+    /* 💖 Floating Hearts */
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    body.night .hearts {
+      opacity: 0;
+    }
+
+    .heart {
+      position: absolute;
+      color: rgba(255, 80, 120, 0.6);
+      animation: floatUp linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(0.6);
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    #fireworks {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .content {
+      text-align: center;
+      z-index: 2;
+      transition: color 0.8s ease;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      transition: color 0.8s ease;
+    }
+
+    .sticker-placeholder img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      position: relative;
+      height: 120px;
+    }
+
+    button {
+      padding: 14px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #yesBtn {
+      background: #ff6b81;
+      color: white;
+      font-size: 22px;
+      padding: 18px 40px;
+    }
+
+    #yesBtn:hover {
+      transform: scale(1.1);
+    }
+
+    #noBtn {
+      background: #ccc;
+      position: absolute;
+      left: 0px;
+      top: 0;
+    }
+
+    .result {
+      display: none;
+    }
+
+    .result img {
+      width: 400px;
+      max-width: 90%;
+      margin-top: 20px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="night-overlay"></div>
+  <div class="stars"></div>
+  <div class="hearts" id="hearts"><div class="heart" style="left: 96.4486vw; top: 124.915vh; font-size: 22.5847px; animation-duration: 14.4979s; animation-delay: 5.27299s;">❤️</div><div class="heart" style="left: 2.89288vw; top: 121.247vh; font-size: 47.3267px; animation-duration: 18.5956s; animation-delay: 5.39776s;">❤️</div><div class="heart" style="left: 76.532vw; top: 102.409vh; font-size: 38.1199px; animation-duration: 10.4023s; animation-delay: 4.14653s;">❤️</div><div class="heart" style="left: 79.4358vw; top: 122.407vh; font-size: 28.8306px; animation-duration: 13.6466s; animation-delay: 5.10116s;">❤️</div><div class="heart" style="left: 76.8144vw; top: 116.1vh; font-size: 38.9662px; animation-duration: 12.4919s; animation-delay: 2.9486s;">❤️</div><div class="heart" style="left: 26.4778vw; top: 106.772vh; font-size: 42.1005px; animation-duration: 17.1107s; animation-delay: 2.70987s;">❤️</div><div class="heart" style="left: 45.6972vw; top: 133.779vh; font-size: 47.94px; animation-duration: 14.4923s; animation-delay: 1.23976s;">❤️</div><div class="heart" style="left: 7.79499vw; top: 101.921vh; font-size: 32.7196px; animation-duration: 16.6107s; animation-delay: 2.71529s;">❤️</div><div class="heart" style="left: 59.1835vw; top: 111.777vh; font-size: 20.2915px; animation-duration: 19.6423s; animation-delay: 1.70862s;">❤️</div><div class="heart" style="left: 27.2155vw; top: 125.203vh; font-size: 48.9634px; animation-duration: 17.1464s; animation-delay: 0.0633282s;">❤️</div><div class="heart" style="left: 26.1982vw; top: 118.311vh; font-size: 48.5666px; animation-duration: 19.5276s; animation-delay: 5.48025s;">❤️</div><div class="heart" style="left: 57.6355vw; top: 110.873vh; font-size: 39.6926px; animation-duration: 17.0707s; animation-delay: 1.43706s;">❤️</div><div class="heart" style="left: 73.4606vw; top: 106.569vh; font-size: 47.2049px; animation-duration: 17.3012s; animation-delay: 2.44765s;">❤️</div><div class="heart" style="left: 1.93407vw; top: 132.782vh; font-size: 27.9634px; animation-duration: 14.4883s; animation-delay: 3.18961s;">❤️</div><div class="heart" style="left: 59.4972vw; top: 121.65vh; font-size: 28.7272px; animation-duration: 19.5436s; animation-delay: 3.68554s;">❤️</div><div class="heart" style="left: 10.9455vw; top: 107.906vh; font-size: 42.992px; animation-duration: 14.2377s; animation-delay: 1.99506s;">❤️</div><div class="heart" style="left: 21.3534vw; top: 107.591vh; font-size: 23.9927px; animation-duration: 14.7935s; animation-delay: 5.32369s;">❤️</div><div class="heart" style="left: 98.3444vw; top: 101.231vh; font-size: 30.7522px; animation-duration: 11.8472s; animation-delay: 1.45561s;">❤️</div><div class="heart" style="left: 38.4198vw; top: 130.493vh; font-size: 27.404px; animation-duration: 17.1571s; animation-delay: 2.95946s;">❤️</div><div class="heart" style="left: 27.2447vw; top: 127.856vh; font-size: 41.6687px; animation-duration: 16.8038s; animation-delay: 4.28353s;">❤️</div><div class="heart" style="left: 7.38821vw; top: 138.043vh; font-size: 22.6225px; animation-duration: 11.6933s; animation-delay: 4.2267s;">❤️</div><div class="heart" style="left: 36.815vw; top: 125.092vh; font-size: 46.294px; animation-duration: 17.0051s; animation-delay: 5.88458s;">❤️</div><div class="heart" style="left: 38.1188vw; top: 116.411vh; font-size: 21.1572px; animation-duration: 14.2032s; animation-delay: 1.5861s;">❤️</div><div class="heart" style="left: 21.1621vw; top: 132.291vh; font-size: 22.2569px; animation-duration: 12.4843s; animation-delay: 2.2204s;">❤️</div><div class="heart" style="left: 19.8112vw; top: 135.211vh; font-size: 31.2512px; animation-duration: 15.2239s; animation-delay: 4.7411s;">❤️</div><div class="heart" style="left: 70.7353vw; top: 100.999vh; font-size: 27.2703px; animation-duration: 14.1943s; animation-delay: 2.63064s;">❤️</div><div class="heart" style="left: 0.939071vw; top: 120.515vh; font-size: 25.4417px; animation-duration: 10.9836s; animation-delay: 5.4204s;">❤️</div><div class="heart" style="left: 66.7656vw; top: 103.112vh; font-size: 33.2625px; animation-duration: 10.6106s; animation-delay: 4.67073s;">❤️</div><div class="heart" style="left: 84.32vw; top: 131.532vh; font-size: 37.9026px; animation-duration: 14.1771s; animation-delay: 5.42243s;">❤️</div><div class="heart" style="left: 35.357vw; top: 106.517vh; font-size: 29.3073px; animation-duration: 15.8166s; animation-delay: 4.38297s;">❤️</div><div class="heart" style="left: 67.651vw; top: 133.462vh; font-size: 46.9681px; animation-duration: 19.8337s; animation-delay: 0.525415s;">❤️</div><div class="heart" style="left: 34.4724vw; top: 102.115vh; font-size: 26.4179px; animation-duration: 18.2049s; animation-delay: 4.12154s;">❤️</div><div class="heart" style="left: 51.6042vw; top: 137.515vh; font-size: 40.2187px; animation-duration: 18.2297s; animation-delay: 1.84193s;">❤️</div><div class="heart" style="left: 78.6121vw; top: 108.509vh; font-size: 48.5366px; animation-duration: 18.2881s; animation-delay: 1.37644s;">❤️</div><div class="heart" style="left: 24.2497vw; top: 114.049vh; font-size: 44.3732px; animation-duration: 15.0648s; animation-delay: 1.88053s;">❤️</div></div>
+  <div id="fireworks"><canvas width="1920" height="957"></canvas></div>
+
+  <audio id="fireworksSound" src="./assets/Fireworks.mp3"></audio>
+  <audio id="loveSound" src="./assets/loveSound.mp3"></audio>
+
+  <div class="content">
+    <div class="sticker-placeholder">
+      <img src=".//teddy-bear.svg" alt="Teddy Bear Sticker">
+    </div>
+
+    <h1>Zwayniha will you be my Valentine ?</h1>
+
+    <div class="buttons">
+      <button id="yesBtn">Yes ❤️‍🔥</button>
+      <button id="noBtn" style="left: 203.45px; top: 119.796px;">No 🙄</button>
+    </div>
+
+    <div class="result" id="result">
+      <h2>YAAAY!! 🥹💞</h2>
+      <img src="./giphy.gif">
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const result = document.getElementById('result');
+    const fireworksContainer = document.getElementById('fireworks');
+    const fireworksSound = document.getElementById('fireworksSound');
+    const loveSound = document.getElementById('loveSound');
+    const heartsContainer = document.getElementById('hearts');
+
+    /* 💖 Generate floating hearts (ONLY from bottom) */
+    for (let i = 0; i < 35; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = 100 + Math.random() * 40 + 'vh'; // 👈 ALWAYS BELOW SCREEN
+      heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+      heart.style.animationDuration = Math.random() * 10 + 10 + 's';
+      heart.style.animationDelay = Math.random() * 6 + 's';
+      heartsContainer.appendChild(heart);
+    }
+
+    noBtn.addEventListener('mouseenter', () => {
+      noBtn.style.left = Math.random() * 300 + 150 + 'px';
+      noBtn.style.top = Math.random() * 200 + 'px';
+    });
+
+    const fireworks = new Fireworks.default(fireworksContainer, {
+      autoresize: true,
+      opacity: 0.6,
+      particles: 140,
+      intensity: 35,
+      flickering: 60,
+      hue: { min: 0, max: 360 }
+    });
+
+    yesBtn.addEventListener('click', () => {
+      document.querySelector('.buttons').style.display = 'none';
+      result.style.display = 'block';
+      document.body.classList.add('night');
+
+      fireworksSound.currentTime = 0;
+      loveSound.currentTime = 0;
+      fireworksSound.volume = 1;
+      loveSound.volume = 1;
+      fireworksSound.play();
+      loveSound.play();
+
+      fireworks.start();
+
+      const DURATION = 98000;
+      const FADE_DURATION = 3000;
+
+      setTimeout(() => {
+        const fade = setInterval(() => {
+          fireworksSound.volume -= 0.02;
+          loveSound.volume -= 0.02;
+          if (fireworksSound.volume <= 0) {
+            fireworksSound.pause();
+            loveSound.pause();
+            clearInterval(fade);
+          }
+        }, 60);
+      }, DURATION - FADE_DURATION);
+
+      setTimeout(() => fireworks.stop(), DURATION);
+    });
+  </script>
+
+
+
+</body></html>
